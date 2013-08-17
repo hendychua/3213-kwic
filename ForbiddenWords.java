@@ -1,23 +1,23 @@
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ForbiddenWords
 {
-    private ArrayList<String> forbiddenWords;
+    private HashSet<String> forbiddenWords;
     
     public ForbiddenWords()
     {
-        this.forbiddenWords = new ArrayList<String>();
+        this.forbiddenWords = new HashSet<String>();
     }
     
     public void add(String word) {
         this.forbiddenWords.add(word);
     }
     
-    public String getWordAtIndex(int i) {
-        return this.forbiddenWords.get(i);
-    }
-    
     public int length() {
         return this.forbiddenWords.size();
+    }
+    
+    public boolean isWordForbidden(String word) {
+    	return this.forbiddenWords.contains(word);
     }
 }
