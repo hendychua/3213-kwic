@@ -13,3 +13,4 @@ Hendy's modules:
 - Output
 - Alphabetizer
 - MainControl
+- ForbiddenWords
