@@ -3,3 +3,7 @@ package.bluej
 
 # OS generated files #
 .DS_STORE
+
+# JAVA compiled files #
+*.class
+*.ctxt
