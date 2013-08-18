@@ -10,7 +10,7 @@ public class ForbiddenWords
     }
     
     public void add(String word) {
-        this.forbiddenWords.add(word);
+        this.forbiddenWords.add(word.toLowerCase());
     }
     
     public int length() {
@@ -18,6 +18,6 @@ public class ForbiddenWords
     }
     
     public boolean isWordForbidden(String word) {
-    	return this.forbiddenWords.contains(word);
+    	return this.forbiddenWords.contains(word.toLowerCase());
     }
 }

@@ -12,8 +12,6 @@ public class MainControl
             
         Output out1 = new Output(alpha);
         out1.print();
-        
-        //System.out.println("Completed");
     
     }
 }

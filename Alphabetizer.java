@@ -9,7 +9,7 @@ public class Alphabetizer
         this.lineStorage = new LineStorage();
         
         for (int i=0; i<original.length(); i++) {
-        
+                  
             String current = original.getLineAtIndex(i);
             
             if (this.lineStorage.length() != 0) {
@@ -24,6 +24,7 @@ public class Alphabetizer
                         break;
                     } else if (j == lineStorage.length()-1) { // last element
                         this.lineStorage.addLine(current);
+                        break;
                     }
                 }
             
