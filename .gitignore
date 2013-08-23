@@ -7,3 +7,6 @@ package.bluej
 # JAVA compiled files #
 *.class
 *.ctxt
+
+# Results file #
+results.txt
