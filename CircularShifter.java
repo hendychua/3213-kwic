@@ -14,8 +14,7 @@ public class CircularShifter
         LineStorage permutedLines = new LineStorage();
         for (int i = 0; i< lineStorage.length(); i++) {
             String line = lineStorage.getLineAtIndex(i);
-            //System.out.println(line);
-            //String firstWord = line.split(" ")[0];
+            line = cleanup(line);
             String[] tokens = line.split(" ");
             for (int j=0; j<tokens.length; j++) {
                 String currentWord = tokens[j];
@@ -30,15 +29,19 @@ public class CircularShifter
                             secondHalf += tokens[k] + " ";
                         }
                     }
-                    String newLine = firstHalf + secondHalf.trim();
+                    String newLine = firstHalf + secondHalf;
                     permutedLines.addLine(newLine);
                 }
             }
-            //if(!this.forbiddenWords.isWordForbidden(firstWord)) {
-            //    permutedLines.addLine(line);
-            //}
         }
         return permutedLines;
     }
+
+    // does cleanup actions on the string like removing multiple spaces, 
+    // leading and trailing spaces, etc.
+	private String cleanup(String line) {
+		line = line.replaceAll(" +", " ");
+		return line.trim();
+	}
     
 }
