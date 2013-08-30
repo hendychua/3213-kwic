@@ -12,4 +12,5 @@ package.bluej
 results.txt
 
 # Input file #
-input.txt
+movie.txt
+forbidden.txt
